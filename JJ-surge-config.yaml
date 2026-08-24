@@ -2,13 +2,13 @@
 loglevel = notify
 dns-server = 223.5.5.5, 119.29.29.29
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com,seed-sequoia.siri.apple.com,sequoia.apple.com
-# external-controller-access = China@0.0.0.0:8233   // 不用Dshboard外部控制器监听就注释掉
+# external-controller-access = China@0.0.0.0:8233 // 不用Dshboard外部控制器监听就注释掉
 allow-wifi-access = true // iOS专用用手机给其他设备做代理
 exclude-simple-hostnames = true
 show-error-page-for-reject = false
 ipv6 = false
-# http-listen = 0.0.0.0:8234               // Mac专用
-# socks5-listen = 0.0.0.0:8235           // Mac专用
+# http-listen = 0.0.0.0:8234 // Mac专用
+# socks5-listen = 0.0.0.0:8235 // Mac专用
 wifi-access-http-port = 6152
 wifi-access-socks5-port = 6153
 # > 直连 TCP 测试 URL
@@ -25,7 +25,12 @@ hijack-dns = *:53
 [Proxy Group]
 # > 代理规则
 Proxy = select, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::User Interface::Update Left Rotation
-手动选择 = select, policy-path=https://, update-interval=-1, icon-url=B1::User Interface::Choose  //填写完整机场地址https://，不更新update-interval=-1
+
+# > 机场订阅
+# 填写完整机场地址policy-path=https://
+# 不想更新订阅update-interval=-1
+手动选择 = select, policy-path=https://, update-interval=86400, icon-url=B1::User Interface::Choose 
+
 Ai = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::Logos::ChatGPT
 Google = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::Logos::Google
 Apple = select, DIRECT, Proxy, 手动选择, icon-url=B1::Logos::Apple Logo
