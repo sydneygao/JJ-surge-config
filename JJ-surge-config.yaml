@@ -1,0 +1,170 @@
+[General]
+loglevel = notify
+dns-server = 223.5.5.5, 119.29.29.29
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com,seed-sequoia.siri.apple.com,sequoia.apple.com
+# external-controller-access = China@0.0.0.0:8233   // 不用Dshboard外部控制器监听就注释掉
+allow-wifi-access = true // iOS专用用手机给其他设备做代理
+exclude-simple-hostnames = true
+show-error-page-for-reject = false
+ipv6 = false
+# http-listen = 0.0.0.0:8234               // Mac专用
+# socks5-listen = 0.0.0.0:8235           // Mac专用
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+# > 直连 TCP 测试 URL
+internet-test-url = http://www.apple.com/library/test/success.html
+# > 代理 TCP 测速 URL
+proxy-test-url = http://www.gstatic.com/generate_204
+test-timeout = 3
+geoip-maxmind-url = https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+ipv6-vif = disabled
+allow-hotspot-access = true
+# > DNS劫持(强制接管指定DNS的53端口请求）
+hijack-dns = *:53
+
+[Proxy Group]
+# > 代理规则
+Proxy = select, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::User Interface::Update Left Rotation
+手动选择 = select, policy-path=https://, update-interval=-1, icon-url=B1::User Interface::Choose  //填写完整机场地址https://，不更新update-interval=-1
+Ai = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::Logos::ChatGPT
+Google = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::Logos::Google
+Apple = select, DIRECT, Proxy, 手动选择, icon-url=B1::Logos::Apple Logo
+Microsoft = select, DIRECT, Proxy, 手动选择, icon-url=B1::Logos::Windows 95
+Spotify = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/Spotify.png
+Social = select, Proxy, 香港节点, 日本节点, 美国节点, 新加坡节点, 台湾节点, 手动选择, DIRECT, icon-url=B1::Social Media::Instagram
+Media = select, Proxy, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, icon-url=B1::Household::Retro TV, no-alert=0, hidden=0, include-all-proxies=0
+Gamer = select, Proxy, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, icon-url=B1::Gaming::Game Controller
+PayPal = select, Proxy, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, icon-url=B1::Ecommerce::PayPal
+Banker = select, Proxy, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, icon-url=B1::Finance::Stock Share
+Shield = select, Proxy, REJECT, 香港节点, 日本节点, 新加坡节点, 美国节点, 手动选择, DIRECT, icon-url=B1::Security::Security Block, no-alert=0, hidden=0, include-all-proxies=0
+漏网之鱼 = select, Proxy, DIRECT, 手动选择, hidden=0, include-all-proxies=0, icon-url=B1::Animals::Whale
+
+# > 区域订阅规则
+香港节点 = smart, include-other-group=手动选择, policy-regex-filter=(?i)(?:香港|HK|HKG|Hong\\s*Kong), icon-url=B1::Culture::Double Decker Bus, no-alert=0, hidden=0, include-all-proxies=0
+美国节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:美国|USA|US|United\\s*States), icon-url=B1::Culture::25 De Abril Bridge, no-alert=0, hidden=0, include-all-proxies=0
+日本节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:日本|JPN|JP|Japan), icon-url=B1::Culture::Daruma Doll, no-alert=0, hidden=0, include-all-proxies=0
+新加坡节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:新加坡|SGP|SG|Singapore), icon-url=B1::Culture::Lion Head, no-alert=0, hidden=0, include-all-proxies=0
+台湾节点 = select, include-other-group=手动选择, policy-regex-filter=(台湾|TW), icon-url=B1::Culture::Taipei Towers, no-alert=0, hidden=0, include-all-proxies=0
+
+[Rule]
+# > LAN Domain直连
+DOMAIN-SUFFIX,tplogin.cn,DIRECT // TPlink路由
+DOMAIN-SUFFIX,miwifi.com,DIRECT // 小米路由
+
+# 优先
+DOMAIN-SUFFIX,jsdelivr.net,DIRECT // CDN
+DOMAIN-SUFFIX,unpkg.com,DIRECT
+DOMAIN-SUFFIX,xhscdn.com,DIRECT // 小红书
+DOMAIN-SUFFIX,streamtheworld.com,DIRECT // RadioApp
+DOMAIN-SUFFIX,theradioapp.com,DIRECT // RadioApp
+DOMAIN-SUFFIX,haotianbaichuan.com,DIRECT // 杨侃电台
+DOMAIN-SUFFIX,qcloud.com,DIRECT // 杨侃电台
+DOMAIN-SUFFIX,cmpassport.com,DIRECT
+DOMAIN-SUFFIX,mytvsuper.xyz,香港节点
+DOMAIN-SUFFIX,stream-link.org,香港节点
+DOMAIN-SUFFIX,godaddy.com,Proxy
+DOMAIN-SUFFIX,overcast.fm,Proxy // Overcast
+DOMAIN-SUFFIX,overcast-cdn.com,Proxy // Overcast
+DOMAIN-SUFFIX,clashmi.app,Proxy // ClashMi
+DOMAIN-SUFFIX,jpush.cn,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/XiaoMi/XiaoMi.list,DIRECT,no-resolve, update-interval=86400 // 小米
+
+# 老虎证券
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TigerFintech/TigerFintech.list,Banker, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/Arthur-vx/broker-rules/main/rule/Surge/Broker/Broker.list,Banker, update-interval=86400
+
+# > 苹果服务
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Apple/Apple_All_No_Resolve.list,Apple, update-interval=86400
+
+# > 微软服务
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Microsoft/Microsoft.list,Microsoft, update-interval=86400
+
+# > GitHub
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GitHub/GitHub.list,Proxy, update-interval=86400
+
+# > Adult
+DOMAIN-SUFFIX,jable.tv,Proxy
+DOMAIN-SUFFIX,91porn.com,Proxy
+DOMAIN-SUFFIX,onlyfans.com,Proxy
+DOMAIN-SUFFIX,rou.video,Proxy
+DOMAIN-SUFFIX,stripchat.com,Proxy
+
+# > China Max
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMax/ChinaMax_All_No_Resolve.list,DIRECT, update-interval=86400
+
+# >高频规则组-代理
+# > Spotify
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Spotify/Spotify.list,Spotify, update-interval=86400
+
+# > PayPal
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/PayPal/PayPal.list,PayPal, update-interval=86400
+
+# > AI (Claude、OpenAI、Gemini)
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Ai,extended-matching, update-interval=86400  // Apple Intelligence
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Claude/Claude.list,Ai, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OpenAI/OpenAI.list,Ai, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Gemini/Gemini.list,Ai, update-interval=86400
+
+# > Google (Youtube、GoogleMusic)
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTube/YouTube.list,Google, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTubeMusic/YouTubeMusic.list,Google, update-interval=86400
+# > Google (GoogleDrive、GoogleSearch、GoogleVoice)
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Google/Google.list,Google, update-interval=86400
+
+# > Meta (Instagram、WhatsApp、Facebook、Twitter、Telegram、SnapChat)
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Whatsapp/Whatsapp.list,Social, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Instagram/Instagram.list,Social, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Facebook/Facebook.list,Social, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,Social, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Snap/Snap.list,Social, update-interval=86400
+
+# > Telegram
+RULE-SET,https://ruleset.skk.moe/List/non_ip/telegram.conf,Social, update-interval=86400
+RULE-SET,https://ruleset.skk.moe/List/ip/telegram.conf,Social,no-resolve, update-interval=86400
+RULE-SET,https://ruleset.skk.moe/List/ip/telegram_asn.conf,Social,no-resolve, update-interval=86400
+
+# > 其他流媒体
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list, Media, update-interval=86400
+# RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list, Media, update-interval=86400
+
+# > 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,Gamer, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Sony/Sony.list,Gamer, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,Gamer, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Nintendo/Nintendo.list,Gamer, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Game/Roblox/Roblox.list,Gamer, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/2KGames/2KGames.list,Gamer, update-interval=86400
+
+# > 2K
+DOMAIN-SUFFIX,take2games.com,Gamer
+DOMAIN-SUFFIX,2ksports.com,Gamer
+DOMAIN-SUFFIX,2k.com,Gamer
+DOMAIN-SUFFIX,2kcoretech.online,Gamer
+DOMAIN-SUFFIX,2kweb.online,Gamer
+DOMAIN-SUFFIX,2kct.onl,Gamer
+# IP-CIDR,199.119.89.0/24,Gamer,no-resolve // 2K Gaming Network
+# IP-CIDR,199.119.88.0/22,Gamer,no-resolve // 2K Gaming Network
+# IP-CIDR,74.114.8.0/21,Gamer,no-resolve // Take-Two Interactive
+IP-ASN,395856,Gamer,no-resolve // 2K ASN (2K GAMES, Inc.)
+# IP-ASN,394977,Gamer,no-resolve // Take-Two ASN (TAKE-TWO INTERACTIVE SOFTWARE, INC.)
+
+# > Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ProxyLite/ProxyLite.list,Proxy
+
+# > CIDR规则
+# IP-CIDR,95.161.76.100/31,REJECT-NO-DROP,no-resolve // telegram
+IP-CIDR,223.5.5.5/32,DIRECT,no-resolve // DNS
+IP-CIDR,119.29.29.29/32,DIRECT,no-resolve // DNS
+
+# > 中国大陆 IP
+GEOIP,CN,DIRECT
+
+# > DNS 查询失败走Final规则
+FINAL,Proxy,dns-failed
+
+[Host]
+# *.bilivideo.cv = server:191.101.132.202:1066
+# *.bilivideo.cv = server:194.156.162.182:1066
+
+[URL Rewrite]
+# ^https?://(www\.)?(g|google)\.cn https://www.google.com 302
