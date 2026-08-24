@@ -5,10 +5,10 @@ iOS Surge app 的配置文件。
 
  **原始链接：**
 ```text
-https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-stash-config.yaml
+https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.yaml
 ```
 
  **国内加速🚀：** 
  ```text
-https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-stash-config.yaml
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-surge-config.yaml
 ```
