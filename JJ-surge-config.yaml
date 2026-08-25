@@ -169,7 +169,6 @@ FINAL,Proxy,dns-failed
 
 [Host]
 # > 特殊域名使用系统 DNS，避免公共 DNS Empty Answer
-token.safebrowsing.apple = server:system
 apm.hexin.cn = server:system //同花顺
 
 [URL Rewrite]
