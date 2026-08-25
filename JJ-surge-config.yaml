@@ -1,6 +1,6 @@
 [General]
 loglevel = notify
-dns-server = 223.5.5.5, 119.29.29.29
+dns-server = 223.5.5.5, 119.29.29.29, system
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com,seed-sequoia.siri.apple.com,sequoia.apple.com
 # external-controller-access = China@0.0.0.0:8233 // 不用Dshboard外部控制器监听就注释掉
 allow-wifi-access = true // iOS专用用手机给其他设备做代理
@@ -168,8 +168,9 @@ GEOIP,CN,DIRECT,no-resolve
 FINAL,Proxy,dns-failed
 
 [Host]
-# *.bilivideo.cv = server:191.101.132.202:1066
-# *.bilivideo.cv = server:194.156.162.182:1066
+# > 特殊域名使用系统 DNS，避免公共 DNS Empty Answer
+token.safebrowsing.apple = server:system
+apm.hexin.cn = server:system //同花顺
 
 [URL Rewrite]
 # ^https?://(www\.)?(g|google)\.cn https://www.google.com 302
