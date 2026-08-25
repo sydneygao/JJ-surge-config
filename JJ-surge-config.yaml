@@ -74,8 +74,18 @@ DOMAIN-SUFFIX,clashmi.app,Proxy // ClashMi
 DOMAIN-SUFFIX,jpush.cn,Proxy
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/XiaoMi/XiaoMi.list,DIRECT,no-resolve, update-interval=86400 // 小米
 
-# 老虎证券
-RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TigerFintech/TigerFintech.list,Banker, update-interval=86400
+# > 游戏 ASN (前置匹配代理)
+IP-ASN,395856,Gamer,no-resolve // 2K Games
+IP-ASN,46555,Gamer,no-resolve // Take-Two Interactive
+IP-ASN,394977,Gamer,no-resolve // Take-Two Interactive
+IP-ASN,32590,Gamer,no-resolve // Valve / Steam
+IP-ASN,33353,Gamer,no-resolve // Sony Interactive / PlayStation
+IP-ASN,11278,Gamer,no-resolve // Nintendo of America
+IP-ASN,152877,Gamer,no-resolve // Nintendo Japan
+IP-ASN,22697,Gamer,no-resolve // Roblox
+IP-ASN,11281,Gamer,no-resolve // Roblox Corporate
+
+# > 海外券商 (富途、长桥、老虎、嘉信)
 RULE-SET,https://raw.githubusercontent.com/Arthur-vx/broker-rules/main/rule/Surge/Broker/Broker.list,Banker, update-interval=86400
 
 # > 苹果服务
@@ -123,10 +133,10 @@ RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Su
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,Social, update-interval=86400
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Snap/Snap.list,Social, update-interval=86400
 
-# > Telegram
-RULE-SET,https://ruleset.skk.moe/List/non_ip/telegram.conf,Social, update-interval=86400
-RULE-SET,https://ruleset.skk.moe/List/ip/telegram.conf,Social,no-resolve, update-interval=86400
-RULE-SET,https://ruleset.skk.moe/List/ip/telegram_asn.conf,Social,no-resolve, update-interval=86400
+# > Telegram (主规则budaobu，补充规则Loyalsoldier)
+RULE-SET,https://cdn.jsdelivr.net/gh/budaobu/rules@main/lists/telegram.list,Social,update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/telegram.txt,Social,no-resolve,update-interval=86400 // Telegram IP 补充
+IP-CIDR,194.221.250.50/32,Social,no-resolve // SKK 独有单 IP
 
 # > 其他流媒体
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list, Netflix, update-interval=86400
@@ -147,11 +157,6 @@ DOMAIN-SUFFIX,2k.com,Gamer
 DOMAIN-SUFFIX,2kcoretech.online,Gamer
 DOMAIN-SUFFIX,2kweb.online,Gamer
 DOMAIN-SUFFIX,2kct.onl,Gamer
-IP-CIDR,199.119.89.0/24,Gamer,no-resolve // 2K Gaming Network
-IP-CIDR,199.119.88.0/22,Gamer,no-resolve // 2K Gaming Network
-IP-CIDR,74.114.8.0/21,Gamer,no-resolve // Take-Two Interactive
-IP-ASN,395856,Gamer,no-resolve // 2K ASN (2K GAMES, Inc.)
-IP-ASN,394977,Gamer,no-resolve // Take-Two ASN (TAKE-TWO INTERACTIVE SOFTWARE, INC.)
 
 # > Proxy
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ProxyLite/ProxyLite.list,Proxy
@@ -161,7 +166,7 @@ RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Su
 IP-CIDR,223.5.5.5/32,DIRECT,no-resolve // DNS
 IP-CIDR,119.29.29.29/32,DIRECT,no-resolve // DNS
 
-# > 中国大陆 IP
+# > 中国大陆 IP (CN区域IP兜底)
 GEOIP,CN,DIRECT,no-resolve
 
 # > DNS 查询失败走Final规则
