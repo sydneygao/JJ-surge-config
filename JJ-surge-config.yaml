@@ -151,7 +151,7 @@ IP-CIDR,199.119.89.0/24,Gamer,no-resolve // 2K Gaming Network
 IP-CIDR,199.119.88.0/22,Gamer,no-resolve // 2K Gaming Network
 IP-CIDR,74.114.8.0/21,Gamer,no-resolve // Take-Two Interactive
 IP-ASN,395856,Gamer,no-resolve // 2K ASN (2K GAMES, Inc.)
-# IP-ASN,394977,Gamer,no-resolve // Take-Two ASN (TAKE-TWO INTERACTIVE SOFTWARE, INC.)
+IP-ASN,394977,Gamer,no-resolve // Take-Two ASN (TAKE-TWO INTERACTIVE SOFTWARE, INC.)
 
 # > Proxy
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ProxyLite/ProxyLite.list,Proxy
