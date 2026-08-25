@@ -86,7 +86,7 @@ IP-ASN,22697,Gamer,no-resolve // Roblox
 IP-ASN,11281,Gamer,no-resolve // Roblox Corporate
 
 # > 海外券商 (富途、长桥、老虎、嘉信)
-RULE-SET,https://raw.githubusercontent.com/Arthur-vx/broker-rules/main/rule/Surge/Broker/Broker.list,Banker, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/Arthur-vx/broker-rules@main/rule/Surge/Broker/Broker.list,Banker, update-interval=86400
 
 # > 苹果服务
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Apple/Apple_All_No_Resolve.list,Apple, update-interval=86400
@@ -139,8 +139,8 @@ RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/telegram.t
 IP-CIDR,194.221.250.50/32,Social,no-resolve // SKK 独有单 IP
 
 # > 其他流媒体
-RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list, Netflix, update-interval=86400
-# RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list, Media, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list,Netflix, update-interval=86400
+# RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list,Media, update-interval=86400
 
 # > 游戏平台
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,Gamer, update-interval=86400
