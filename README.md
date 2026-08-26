@@ -22,5 +22,5 @@ https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-surge-config.yaml
 ```text
 手动选择 = select, policy-path=https://, update-interval=-1, icon-url=B1::User Interface::Choose
 ```
-## 🤝 Contributing
+### 🤝 Contributing
 Issues and Pull Requests are welcome to help improve this configuration!
