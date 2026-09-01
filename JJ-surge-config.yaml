@@ -74,6 +74,14 @@ DOMAIN-SUFFIX,clashmi.app,Proxy // ClashMi
 DOMAIN-SUFFIX,jpush.cn,Proxy
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/XiaoMi/XiaoMi.list,DIRECT,no-resolve, update-interval=86400 // 小米
 
+# > AI (Claude、OpenAI、Gemini)
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Ai,extended-matching, update-interval=86400  // Apple Intelligence
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Claude/Claude.list,Ai, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OpenAI/OpenAI.list,Ai, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Gemini/Gemini.list,Ai, update-interval=86400
+IP-ASN,399358,Ai,no-resolve // Claude
+DOMAIN-SUFFIX,searchgpt.com,Ai // ChatGPT
+
 # > 游戏 ASN (前置匹配代理)
 IP-ASN,395856,Gamer,no-resolve // 2K Games
 IP-ASN,46555,Gamer,no-resolve // Take-Two Interactive
@@ -113,12 +121,6 @@ RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Su
 
 # > PayPal
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/PayPal/PayPal.list,PayPal, update-interval=86400
-
-# > AI (Claude、OpenAI、Gemini)
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Ai,extended-matching, update-interval=86400  // Apple Intelligence
-RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Claude/Claude.list,Ai, update-interval=86400
-RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OpenAI/OpenAI.list,Ai, update-interval=86400
-RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Gemini/Gemini.list,Ai, update-interval=86400
 
 # > Google (Youtube、GoogleMusic)
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTube/YouTube.list,Google, update-interval=86400
