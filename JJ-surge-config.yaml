@@ -45,11 +45,11 @@ Shield = select, Proxy, REJECT, 香港节点, 日本节点, 新加坡节点, 美
 漏网之鱼 = select, Proxy, DIRECT, 手动选择, hidden=0, include-all-proxies=0, icon-url=B1::Animals::Whale
 
 # > 区域订阅规则
-香港节点 = smart, include-other-group=手动选择, policy-regex-filter=(?i)(?:香港|HKG|HK|Hong[\s_-]*Kong), icon-url=B1::Culture::Double Decker Bus, no-alert=0, hidden=0, include-all-proxies=0
-美国节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:美国|USA|US|United[\s_-]*States), icon-url=B1::Culture::25 De Abril Bridge, no-alert=0, hidden=0, include-all-proxies=0
-日本节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:日本|JPN|JP|Japan), icon-url=B1::Culture::Daruma Doll, no-alert=0, hidden=0, include-all-proxies=0
-新加坡节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:新加坡|SGP|SG|Singapore), icon-url=B1::Culture::Lion Head, no-alert=0, hidden=0, include-all-proxies=0
-台湾节点 = select, include-other-group=手动选择, policy-regex-filter=(台湾|TW), icon-url=B1::Culture::Taipei Towers, no-alert=0, hidden=0, include-all-proxies=0
+香港节点 = smart, include-other-group=手动选择, policy-regex-filter=(?i)(?:香港|🇭🇰|HKG|Hong[ _-]*Kong|(?:^|[^A-Z])HK(?:[^A-Z]|$)), icon-url=B1::Culture::Double Decker Bus
+美国节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:美国|美國|🇺🇸|USA|United[ _-]*States|America|(?:^|[^A-Z])US(?:[^A-Z]|$)), icon-url=B1::Culture::25 De Abril Bridge
+日本节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:日本|🇯🇵|JPN|Japan|(?:^|[^A-Z])JP(?:[^A-Z]|$)), icon-url=B1::Culture::Daruma Doll
+新加坡节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:新加坡|狮城|獅城|🇸🇬|SGP|Singapore|(?:^|[^A-Z])SG(?:[^A-Z]|$)), icon-url=B1::Culture::Lion Head
+台湾节点 = select, include-other-group=手动选择, policy-regex-filter=(?i)(?:台湾|台灣|🇹🇼|TWN|Taiwan|Taipei|(?:^|[^A-Z])TW(?:[^A-Z]|$)), icon-url=B1::Culture::Taipei Towers
 
 [Rule]
 # > LAN Domain直连
