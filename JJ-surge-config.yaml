@@ -133,7 +133,7 @@ RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Su
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Whatsapp/Whatsapp.list,Social, update-interval=86400
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Instagram/Instagram.list,Social, update-interval=86400
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Facebook/Facebook.list,Social, update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,Social, update-interval=86400
+RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Twitter/Twitter.list,Social, update-interval=86400
 RULE-SET,https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Snap/Snap.list,Social, update-interval=86400
 
 # > Telegram (主规则budaobu，补充规则Loyalsoldier)
