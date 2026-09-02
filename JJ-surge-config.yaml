@@ -53,6 +53,7 @@ Shield = select, Proxy, REJECT, 香港节点, 日本节点, 新加坡节点, 美
 
 [Rule]
 # > LAN Domain直连
+RULE-SET,LAN,DIRECT,no-resolve
 DOMAIN-SUFFIX,tplogin.cn,DIRECT // TPlink路由
 DOMAIN-SUFFIX,miwifi.com,DIRECT // 小米路由
 
