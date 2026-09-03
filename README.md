@@ -5,14 +5,14 @@
 
  **Original link:**
 ```text
-https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.yaml
+https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.conf
 ```
 **China acceleration 🚀:**
 ```text
-https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-surge-config.yaml
+https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-surge-config.conf
 ```
 ```text
-https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.yaml
+https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.conf
 ```
 ### ✈️ Add your airport subscription
 **Tap the configuration file JJ-surge-config, and select "Edit in Text Mode".**
