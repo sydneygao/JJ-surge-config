@@ -11,7 +11,9 @@ https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config
 ```text
 https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-surge-config.yaml
 ```
-
+```text
+https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-surge-config.yaml
+```
 ### ✈️ Add your airport subscription
 **Tap the configuration file JJ-surge-config, and select "Edit in Text Mode".**
 **Find the code below and fill in the required information.**
