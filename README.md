@@ -1,5 +1,5 @@
 # JJ-surge-config
-## Configuration files for the iOS Surge app.
+## Config files for the iOS Surge app.
 
 ### ⚙️ Import the configuration in the Surge app by selecting "Import from URL" and entering one of the following links:
 
