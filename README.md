@@ -3,11 +3,11 @@
 
 ### ⚙️ Import the configuration in the Surge app by selecting "Import from URL" and entering one of the following links:
 
- **Original link:**
+**原生下载链接 🔗:**
 ```text
 https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-config.conf
 ```
-**China acceleration 🚀:**
+**CDN加速链接 🚀:**
 ```text
 https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-config.conf
 ```
@@ -22,5 +22,5 @@ https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ
  1. Fill in the complete airport address below after `policy-path=https://`
  2. To disable subscription updates, set `update-interval=-1`
 ```text
-手动选择 = select, policy-path=`https://`, update-interval=`-1`, icon-url=B1::User Interface::Choose
+手动选择 = select, policy-path=https://, update-interval=-1, icon-url=B1::User Interface::Choose
 ```
