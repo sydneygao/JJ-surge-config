@@ -22,5 +22,5 @@ https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ
  1. Fill in the complete airport address below after `policy-path=https://`
  2. To disable subscription updates, set `update-interval=-1`
 ```text
-手动选择 = select, policy-path=https://, update-interval=-1, icon-url=B1::User Interface::Choose
+手动选择 = select, policy-path=`https://`, update-interval=`-1`, icon-url=B1::User Interface::Choose
 ```
