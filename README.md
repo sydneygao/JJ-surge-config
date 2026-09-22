@@ -3,17 +3,21 @@
 
 ### ⚙️ Import the configuration in the Surge app by selecting "Import from URL" and entering one of the following links:
 
-**原生下载链接 🔗:**
+**主链路（gh-proxy.org｜最快，≤60 秒更新）：**
 ```text
-https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-config.conf
+https://gh-proxy.org/https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-config.conf
 ```
-**CDN加速链接 🚀:**
+
+**备链路（gh.idayer.com｜不同链路，实时）：**
+```text
+https://gh.idayer.com/https://raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-config.conf
+```
+
+**兜底链路（cdn.jsdelivr.net｜最稳，接受最长约 12 小时延迟）：**
 ```text
 https://cdn.jsdelivr.net/gh/sydneygao/JJ-surge-config@main/JJ-config.conf
 ```
-```text
-https://git.yylx.win/raw.githubusercontent.com/sydneygao/JJ-surge-config/main/JJ-config.conf
-```
+
 ### ✈️ Add your airport subscription
 **Tap the configuration file JJ-surge-config, and select "Edit in Text Mode".**
 **Find the code below and fill in the required information.**
